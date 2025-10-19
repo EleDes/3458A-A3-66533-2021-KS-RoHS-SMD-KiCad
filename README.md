@@ -2,7 +2,7 @@
 
 Based on CLIP 66503 and provided [pictures from recent 66533 version](Pictures/ "pictures from recent 66533 version").
 
-There might be errors and couple of open questions - [see issues](https://github.com/EleDes/3458A-A3-66533-2021-KS-RoHS-SMD-KiCad/issues/ "see issues")
+There might be errors and there are a couple of open questions - [see issues](https://github.com/EleDes/3458A-A3-66533-2021-KS-RoHS-SMD-KiCad/issues/ "see issues")
 
 If there are errors or questions please [open an issue](https://github.com/EleDes/3458A-A3-66533-2021-KS-RoHS-SMD-KiCad/issues/new).
 
@@ -28,10 +28,12 @@ If there are errors or questions please [open an issue](https://github.com/EleDe
 
 ![3D top perspective](3458A%20A3%2066533%202021%20KS%20SMD%20-%203D%20top%20perspective.png?raw=true "3D top perspective")
 
+![Original](Pictures/3458A%20A3%2066533%202021%20KS%20SMD%20-%20top.jpg?raw=true "Original")
 
 
 
-These 3D models are excluded from project license (folder 3D):
+
+These 3D models are excluded from project license (folder 3D models):
 
 0009483064: Molex KK 396 from [https://www.molex.com/en-us/products/part-detail/09483064](https://www.molex.com/en-us/products/part-detail/09483064) - copyright: Molex 
 
