@@ -1,0 +1,103 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "85bbd1e2-ad6c-4876-8c36-195013da63aa")
+	(paper "A5")
+	(title_block
+		(title "3458A A3 A/D CIRCUIT 03458-66533")
+		(date "2025-10-19")
+		(rev "002")
+	)
+	(lib_symbols)
+	(sheet
+		(at 24.384 32.766)
+		(size 78.994 50.038)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "22dc2653-0ced-4a11-a2c7-cabb287d6773")
+		(property "Sheetname" "A3 IN-GRD CTL & INTERPOLATOR"
+			(at 24.384 32.0544 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "3458A A3 66533 2021 KS SMD p1.kicad_sch"
+			(at 24.384 83.3886 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "3458A A3 66533 2021 KS SMD"
+				(path "/85bbd1e2-ad6c-4876-8c36-195013da63aa"
+					(page "1")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 105.275 32.7312)
+		(size 78.994 50.038)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "62b5d91c-32ae-4437-ae8a-218e69e0adc0")
+		(property "Sheetname" "A3 A/D CIRCUIT"
+			(at 105.275 32.0196 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "3458A A3 66533 2021 KS SMD p2.kicad_sch"
+			(at 105.275 83.3538 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "3458A A3 66533 2021 KS SMD"
+				(path "/85bbd1e2-ad6c-4876-8c36-195013da63aa"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "0")
+		)
+	)
+	(embedded_fonts no)
+)

@@ -1,0 +1,148 @@
+# FreeCAD macro: Intel 80286 PGA-68 (ceramic violet body + gold pins)
+# Requires: Stock FreeCAD (Part workbench). No external packages.
+# Output: A model in the active document + STEP export at OUTPUT_PATH.
+
+import FreeCAD as App
+import FreeCADGui as Gui
+import Part, math, os
+
+# ---------------- Parameters (mm) ----------------
+PITCH = 2.54           # pin pitch
+GRID_N = 11             # 9x9 nominal grid
+PINS_TOTAL = 68        # sanity check
+
+PIN_D = 0.45           # pin diameter
+PIN_LEN = 3.6          # length below body (downwards)
+HOLE_D = PIN_D * 0.65  # visual relief hole diameter in body (optional)
+
+BODY_SIZE = 29.46      # square ceramic body side
+BODY_THICK = 1.5       # base thickness
+
+CAP_SIZE = 10  # top cap inset
+CAP_THICK = 1.2
+
+PIN1_CHAMFER = 2.5     # chamfer on pin-1 corner (lower-left in top view)
+
+DIE_WINDOW = 0       # decorative recess on cap (0 to disable)
+DIE_RECESS = 0.3
+
+# Where to write the STEP:
+OUTPUT_PATH = os.path.join(os.path.expanduser("~"), "Intel_80286_PGA68.step")
+
+# ---------------- Helpers ----------------
+def removed_indices_68(n):
+    last = n - 1
+    removed = set()
+    removed.add((0, 0))
+    removed.add((9, 0))
+    removed.add((10, 0))
+    removed.add((10, 9))
+    removed.add((10, 10))
+    removed.add((1, 10))
+    removed.add((0, 10))
+
+    # 2) Remove the inner 7x7 inside the central 9x9:
+    #    central 9x9 is indices 1..9; its inner is 2..8
+    for i in range(2, last-1):      # 2..8
+        for j in range(2, last-1):  # 2..8
+            removed.add((i, j))
+
+    # Optional check
+    try:
+        App.Console.PrintMessage(f"[mask] removed={len(removed)}; kept={n*n - len(removed)} (expected kept=32)\n")
+    except Exception:
+        pass
+
+    return removed
+
+def grid_positions(n, pitch):
+    offs = (n - 1) / 2.0
+    for i in range(n):
+        for j in range(n):
+            yield (i, j, (i - offs) * pitch, (j - offs) * pitch)
+
+# ---------------- Build Model ----------------
+doc = App.newDocument("Intel_80286_PGA68")
+
+# Body (centered on XY, Z=0 at bottom)
+body = Part.makeBox(BODY_SIZE, BODY_SIZE, BODY_THICK, App.Vector(-BODY_SIZE/2.0, -BODY_SIZE/2.0, 0))
+
+# Pin-1 chamfer: cut a right-triangle prism from the lower-left (x-, y-) top corner
+ch = PIN1_CHAMFER
+tri_wire = Part.makePolygon([
+    App.Vector(-BODY_SIZE/2.0, -BODY_SIZE/2.0 + ch, 0),
+    App.Vector(-BODY_SIZE/2.0 + ch, -BODY_SIZE/2.0, 0),
+    App.Vector(-BODY_SIZE/2.0, -BODY_SIZE/2.0, 0),
+    App.Vector(-BODY_SIZE/2.0, -BODY_SIZE/2.0 + ch, 0)
+])
+tri_face = Part.Face(tri_wire)
+tri_prism = tri_face.extrude(App.Vector(0, 0, BODY_THICK))
+body = body.cut(tri_prism)
+
+# Top cap
+cap = Part.makeBox(CAP_SIZE, CAP_SIZE, CAP_THICK, App.Vector(-CAP_SIZE/2.0, -CAP_SIZE/2.0, BODY_THICK))
+
+# Optional recessed window on cap
+if DIE_WINDOW > 0 and DIE_RECESS > 0:
+    recess = Part.makeBox(DIE_WINDOW, DIE_WINDOW, DIE_RECESS,
+                          App.Vector(-DIE_WINDOW/2.0, -DIE_WINDOW/2.0, BODY_THICK + CAP_THICK - DIE_RECESS))
+    cap = cap.cut(recess)
+
+#package = body.fuse(cap)
+package = body
+
+# Pins & relief holes
+removed = removed_indices_68(GRID_N)
+pin_r = PIN_D / 2.0
+hole_r = HOLE_D / 2.0
+
+pins = []
+holes = []
+
+for i, j, x, y in grid_positions(GRID_N, PITCH):
+    if (i, j) in removed:
+        continue
+    # pin cylinder extruding downward (negative Z)
+    pin = Part.makeCylinder(pin_r, PIN_LEN, App.Vector(x, y, 0), App.Vector(0, 0, -1))
+    pins.append(pin)
+    # optional small relief hole into body
+    hole = Part.makeCylinder(hole_r, BODY_THICK * 0.55, App.Vector(x, y, BODY_THICK), App.Vector(0, 0, -1))
+#    holes.append(hole)
+
+if len(pins) != PINS_TOTAL:
+    App.Console.PrintMessage("[warn] Pin count is %d (expected %d). Adjust removed_indices_68().\n" % (len(pins), PINS_TOTAL))
+
+pins_compound = Part.Compound(pins) if pins else None
+holes_compound = Part.Compound(holes) if holes else None
+
+if holes_compound:
+    package = package.fuse(holes_compound)  # shallow relief looks like vias
+
+# ---------------- Add to document ----------------
+obj_pkg = doc.addObject("Part::Feature", "Ceramic_Package")
+obj_pkg.Shape = package
+
+if pins_compound:
+    obj_pins = doc.addObject("Part::Feature", "Gold_Pins")
+    obj_pins.Shape = pins_compound
+
+doc.recompute()
+
+# Colors (for on-screen clarity; some STEP viewers keep AP214 colors)
+try:
+    obj_pkg.ViewObject.ShapeColor = (0.6, 0.5, 0.8)   # violet-ish
+    if pins_compound:
+        obj_pins.ViewObject.ShapeColor = (0.9, 0.75, 0.2)  # gold-ish
+except Exception:
+    pass
+
+# ---------------- Export STEP ----------------
+to_export = [obj_pkg]
+if pins_compound:
+    to_export.append(obj_pins)
+
+try:
+#    Part.export(to_export, OUTPUT_PATH)
+    App.Console.PrintMessage("Exported STEP to: %s\n" % OUTPUT_PATH)
+except Exception as e:
+    App.Console.PrintError("STEP export failed: %s\n" % e)
