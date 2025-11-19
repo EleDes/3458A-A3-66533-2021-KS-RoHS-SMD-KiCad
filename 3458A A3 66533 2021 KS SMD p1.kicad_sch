@@ -6,7 +6,7 @@
 	(paper "A3")
 	(title_block
 		(title "3458A A3 IN-GRD CTL & INTERPOLATOR 03458-66533")
-		(date "2025-10-28")
+		(date "2025-11-19")
 		(rev "002")
 	)
 	(lib_symbols
@@ -60220,7 +60220,7 @@
 				(hide yes)
 			)
 		)
-		(property "Comment" "alternative: 475 e.g. Susumu RG3216"
+		(property "Comment" "alternative: 475 e.g. Susumu RG2012"
 			(at 326.39 49.53 90)
 			(effects
 				(font

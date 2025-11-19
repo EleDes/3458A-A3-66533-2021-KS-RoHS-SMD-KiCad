@@ -6,7 +6,7 @@
 	(paper "A3")
 	(title_block
 		(title "3458A A3 A/D CIRCUIT 03458-66533")
-		(date "2025-10-28")
+		(date "2025-11-19")
 		(rev "002")
 	)
 	(lib_symbols
@@ -20247,7 +20247,7 @@
 			)
 		)
 		(column_widths 8.128 5.588 12.2849 19.558 69.85)
-		(row_heights 3.175 2.8696 2.794 11.176 14.478 11.176 11.176 6.096 7.874)
+		(row_heights 3.175 2.8696 9.652 7.874 12.7 11.176 11.176 6.096 7.874)
 		(cells
 			(table_cell "Part#"
 				(exclude_from_sim no)
@@ -20395,7 +20395,7 @@
 				)
 				(uuid "797992c3-d303-4202-ac43-addf4b62e575")
 			)
-			(table_cell "14-1989"
+			(table_cell "14-1989 (highest DC)"
 				(exclude_from_sim no)
 				(at 317.754 16.1804 0)
 				(size 19.558 2.8696)
@@ -20432,7 +20432,7 @@
 			(table_cell "66503"
 				(exclude_from_sim no)
 				(at 291.7531 19.05 0)
-				(size 8.128 2.794)
+				(size 8.128 9.652)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
 				(fill
@@ -20449,7 +20449,7 @@
 			(table_cell "B"
 				(exclude_from_sim no)
 				(at 299.8811 19.05 0)
-				(size 5.588 2.794)
+				(size 5.588 9.652)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
 				(fill
@@ -20463,10 +20463,10 @@
 				)
 				(uuid "c46439c4-b3a6-4582-8261-5dbb00656674")
 			)
-			(table_cell ""
+			(table_cell "2931\n2933"
 				(exclude_from_sim no)
 				(at 305.4691 19.05 0)
-				(size 12.2849 2.794)
+				(size 12.2849 9.652)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
 				(fill
@@ -20480,10 +20480,10 @@
 				)
 				(uuid "c740b889-99ef-41db-8792-09dcf670e9dc")
 			)
-			(table_cell ""
+			(table_cell "31-1989 (CLIP)\n45-1989"
 				(exclude_from_sim no)
 				(at 317.754 19.05 0)
-				(size 19.558 2.794)
+				(size 19.558 9.652)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
 				(fill
@@ -20497,10 +20497,10 @@
 				)
 				(uuid "3d6e0e68-90af-4351-bc2f-3fe4f3474883")
 			)
-			(table_cell "Unknown"
+			(table_cell "U213, R211, R212, C146, C147, L223 added\nCLIP ERC 2928: R184 619k (was 1M), R185 3.01M (was 4.7M)\n R112 3.01k to 5.62k, U112 LM6364N to AD848JN\nCLIP ERC 2931: R142 & R143 added\nLater (45-1989): JM183 replaced with R182 140Ω || R183 10kΩ"
 				(exclude_from_sim no)
 				(at 337.312 19.05 0)
-				(size 69.85 2.794)
+				(size 69.85 9.652)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
 				(fill
@@ -20516,8 +20516,8 @@
 			)
 			(table_cell "66503"
 				(exclude_from_sim no)
-				(at 291.7531 21.844 0)
-				(size 8.128 11.176)
+				(at 291.7531 28.702 0)
+				(size 8.128 7.874)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
 				(fill
@@ -20533,8 +20533,8 @@
 			)
 			(table_cell "C"
 				(exclude_from_sim no)
-				(at 299.8811 21.844 0)
-				(size 5.588 11.176)
+				(at 299.8811 28.702 0)
+				(size 5.588 7.874)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
 				(fill
@@ -20548,10 +20548,10 @@
 				)
 				(uuid "6012dbed-602d-4fc3-b4d7-fe8ecc8bb162")
 			)
-			(table_cell "2931\n2949\n3011"
+			(table_cell "2949\n3011\n3047"
 				(exclude_from_sim no)
-				(at 305.4691 21.844 0)
-				(size 12.2849 11.176)
+				(at 305.4691 28.702 0)
+				(size 12.2849 7.874)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
 				(fill
@@ -20565,10 +20565,10 @@
 				)
 				(uuid "7519cfb8-6550-420a-b4db-5ae4154a407a")
 			)
-			(table_cell "31-1989 (CLIP)\n40-1989\n10-1990"
+			(table_cell "50-1989\n10-1990 (highest DC)\n22-1991"
 				(exclude_from_sim no)
-				(at 317.754 21.844 0)
-				(size 19.558 11.176)
+				(at 317.754 28.702 0)
+				(size 19.558 7.874)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
 				(fill
@@ -20582,10 +20582,10 @@
 				)
 				(uuid "90022e12-4f04-4f5e-a0d2-a988b56bb646")
 			)
-			(table_cell "U213, R211, R212, C146, C147, L223 added\nCLIP ERC 2928: R184 619k (was 1M), R185 3.01M (was 4.7M)\n R112 3.01k to 5.62k, U112 LM6364N to AD848JN\nCLIP ERC 2931: R142 & R143 added\nLater (40-1989): JM183 replaced with R182 140Ω || R183 10kΩ\nLater (10-1990): R172 402Ω (was 3.48kΩ)"
+			(table_cell "TBD\nLater (10-1990): R172 402Ω (was 3.48kΩ)\nLater (22-1991): R182 100Ω (was 140Ω), R183 1k (was 10k), R141 18.7k (was 12.1k), R142 1k (was 10Ω)"
 				(exclude_from_sim no)
-				(at 337.312 21.844 0)
-				(size 69.85 11.176)
+				(at 337.312 28.702 0)
+				(size 69.85 7.874)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
 				(fill
@@ -20601,8 +20601,8 @@
 			)
 			(table_cell "66503"
 				(exclude_from_sim no)
-				(at 291.7531 33.02 0)
-				(size 8.128 14.478)
+				(at 291.7531 36.576 0)
+				(size 8.128 12.7)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
 				(fill
@@ -20618,8 +20618,8 @@
 			)
 			(table_cell "D"
 				(exclude_from_sim no)
-				(at 299.8811 33.02 0)
-				(size 5.588 14.478)
+				(at 299.8811 36.576 0)
+				(size 5.588 12.7)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
 				(fill
@@ -20635,8 +20635,8 @@
 			)
 			(table_cell "3519"
 				(exclude_from_sim no)
-				(at 305.4691 33.02 0)
-				(size 12.2849 14.478)
+				(at 305.4691 36.576 0)
+				(size 12.2849 12.7)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
 				(fill
@@ -20650,10 +20650,10 @@
 				)
 				(uuid "621418c7-022d-42c7-9000-59eb70b5df67")
 			)
-			(table_cell "19-1995"
+			(table_cell "19-1995 (highest DC)"
 				(exclude_from_sim no)
-				(at 317.754 33.02 0)
-				(size 19.558 14.478)
+				(at 317.754 36.576 0)
+				(size 19.558 12.7)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
 				(fill
@@ -20667,10 +20667,10 @@
 				)
 				(uuid "0019fbca-b8ef-42cb-a1ce-3c3350ccba6f")
 			)
-			(table_cell "R182 100Ω (was 140Ω), R183 1k (was 10k)\nR141 18.7k (was 12.1k), R142 1k (was 10Ω), R144 16.7k added\nR143 1k to 51.1k & connection to -15V (was XCOMP)\nCR144 & CR145 added\nU213 removed (short between pin 8 & 10)\nU230 OSC metal case (was plastic)\nU404 replaced with LT1122 (was LF400C)\nQ401, Q402 replaced with TO-92 2N3906 (was TO-18 2N4917)"
+			(table_cell "R144 16.7k added\nR143 51.1k (was 1k) & connection to -15V (was XCOMP)\nCR144 & CR145 added\nU213 removed (short between pin 8 & 10)\nU230 OSC metal case (was plastic)\nU404 replaced with LT1122 (was LF400C)\nQ401, Q402 replaced with TO-92 2N3906 (was TO-18 2N4917)"
 				(exclude_from_sim no)
-				(at 337.312 33.02 0)
-				(size 69.85 14.478)
+				(at 337.312 36.576 0)
+				(size 69.85 12.7)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
 				(fill
@@ -20686,7 +20686,7 @@
 			)
 			(table_cell "66513"
 				(exclude_from_sim no)
-				(at 291.7531 47.498 0)
+				(at 291.7531 49.276 0)
 				(size 8.128 11.176)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -20703,7 +20703,7 @@
 			)
 			(table_cell "A"
 				(exclude_from_sim no)
-				(at 299.8811 47.498 0)
+				(at 299.8811 49.276 0)
 				(size 5.588 11.176)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -20720,7 +20720,7 @@
 			)
 			(table_cell "4243\n?\n?"
 				(exclude_from_sim no)
-				(at 305.4691 47.498 0)
+				(at 305.4691 49.276 0)
 				(size 12.2849 11.176)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -20735,9 +20735,9 @@
 				)
 				(uuid "a762bf4f-c4e1-4263-88bb-9334759ce597")
 			)
-			(table_cell "41-2000\n47-2000\n36-2004"
+			(table_cell "41-2000 (highest DC)\n47-2000 (highest DC)\n36-2004 (highest DC)"
 				(exclude_from_sim no)
-				(at 317.754 47.498 0)
+				(at 317.754 49.276 0)
 				(size 19.558 11.176)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -20754,7 +20754,7 @@
 			)
 			(table_cell "U210 Gate array replaced with Orbit 6968A (was Fujitsu MB651314)\nU301 & U351 replaced with HFBR-2521Z (was HFBR2501)\nU304 & U354 replaced with HFBR-1521Z (was HFBR1510)\nR122 301Ω (was 243Ω, latest 47-2000 - TBD change on which REV)\nLater (36-2004): U142/U405 patchboard 66530:\n EL2252CM (was 2xEL2018CN)"
 				(exclude_from_sim no)
-				(at 337.312 47.498 0)
+				(at 337.312 49.276 0)
 				(size 69.85 11.176)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -20771,7 +20771,7 @@
 			)
 			(table_cell "66513"
 				(exclude_from_sim no)
-				(at 291.7531 58.674 0)
+				(at 291.7531 60.452 0)
 				(size 8.128 11.176)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -20788,7 +20788,7 @@
 			)
 			(table_cell "B"
 				(exclude_from_sim no)
-				(at 299.8811 58.674 0)
+				(at 299.8811 60.452 0)
 				(size 5.588 11.176)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -20805,7 +20805,7 @@
 			)
 			(table_cell "?"
 				(exclude_from_sim no)
-				(at 305.4691 58.674 0)
+				(at 305.4691 60.452 0)
 				(size 12.2849 11.176)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -20820,9 +20820,9 @@
 				)
 				(uuid "6f84e607-4195-47c5-bab2-8de0ad55cbd2")
 			)
-			(table_cell "22-2016"
+			(table_cell "22-2016 (highest DC)"
 				(exclude_from_sim no)
-				(at 317.754 58.674 0)
+				(at 317.754 60.452 0)
 				(size 19.558 11.176)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -20839,7 +20839,7 @@
 			)
 			(table_cell "U210 Gate array patchboard 26550:\n Altera MAX V 5M1270ZT144C5N (was Orbit 6968A)\n + level shifter SN74LVC8T245P\n + LDO LMS8117AMP-1.8 & LMS8117AMP-3.3\nU220 µC replaced with ATMEL AT89LS51 (was Intel P80C51BH)\nU111 & U140 replaced with AD817AN (was LM6361N)"
 				(exclude_from_sim no)
-				(at 337.312 58.674 0)
+				(at 337.312 60.452 0)
 				(size 69.85 11.176)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -20856,7 +20856,7 @@
 			)
 			(table_cell "66523"
 				(exclude_from_sim no)
-				(at 291.7531 69.85 0)
+				(at 291.7531 71.628 0)
 				(size 8.128 6.096)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -20873,7 +20873,7 @@
 			)
 			(table_cell "2"
 				(exclude_from_sim no)
-				(at 299.8811 69.85 0)
+				(at 299.8811 71.628 0)
 				(size 5.588 6.096)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -20890,7 +20890,7 @@
 			)
 			(table_cell "? wekomm"
 				(exclude_from_sim no)
-				(at 305.4691 69.85 0)
+				(at 305.4691 71.628 0)
 				(size 12.2849 6.096)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -20905,9 +20905,9 @@
 				)
 				(uuid "a5df271c-811f-4ff8-b570-6176775839a5")
 			)
-			(table_cell "29-2019\n(from sticker)"
+			(table_cell "29-2019\n42-2019"
 				(exclude_from_sim no)
-				(at 317.754 69.85 0)
+				(at 317.754 71.628 0)
 				(size 19.558 6.096)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -20924,7 +20924,7 @@
 			)
 			(table_cell "Full redesign in RoHS SMD\nU142, U181, U405 replaced with TL3016C (was EL2018CN/EL2252CM)\n + discrete level shift & ±5V from 78/7905 regulator"
 				(exclude_from_sim no)
-				(at 337.312 69.85 0)
+				(at 337.312 71.628 0)
 				(size 69.85 6.096)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -20941,7 +20941,7 @@
 			)
 			(table_cell "66533"
 				(exclude_from_sim no)
-				(at 291.7531 75.946 0)
+				(at 291.7531 77.724 0)
 				(size 8.128 7.874)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -20958,7 +20958,7 @@
 			)
 			(table_cell "002"
 				(exclude_from_sim no)
-				(at 299.8811 75.946 0)
+				(at 299.8811 77.724 0)
 				(size 5.588 7.874)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -20975,7 +20975,7 @@
 			)
 			(table_cell "? Keysight"
 				(exclude_from_sim no)
-				(at 305.4691 75.946 0)
+				(at 305.4691 77.724 0)
 				(size 12.2849 7.874)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -20990,9 +20990,9 @@
 				)
 				(uuid "121cf1d1-4f4b-42b8-8c94-6453c418c3c2")
 			)
-			(table_cell "04-2021\n30-2021\n(from sticker)"
+			(table_cell "04-2021\n30-2021"
 				(exclude_from_sim no)
-				(at 317.754 75.946 0)
+				(at 317.754 77.724 0)
 				(size 19.558 7.874)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
@@ -21009,7 +21009,7 @@
 			)
 			(table_cell "C119 150p || 180p (was 1x330p) & C409 470p || 10p (∑480p, was 1x510p)\nR407 47Ω (was 100Ω)\nJM210 changed to SMD 0Ω (was wire bridge)\nTime interpolator: added some 0Ω in series"
 				(exclude_from_sim no)
-				(at 337.312 75.946 0)
+				(at 337.312 77.724 0)
 				(size 69.85 7.874)
 				(margins 0.9525 0.9525 0.9525 0.9525)
 				(span 1 1)
