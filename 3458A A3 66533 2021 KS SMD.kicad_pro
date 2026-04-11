@@ -106,7 +106,7 @@
         "silk_text_thickness": 0.1,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.5
+          "min_clearance": 0.2
         }
       },
       "diff_pair_dimensions": [
@@ -116,7 +116,76 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "shorting_items|130764000|74930000|afb86939-0783-4c80-892a-ebf7138b82e7|dd7b6642-a15a-4f8a-9388-7d76ad6cfeac",
+          "Like Original"
+        ],
+        [
+          "silk_overlap|129706000|63092000|09b8912b-7de2-4ceb-b08b-7e1fe66afdcb|265efb11-1e18-42a7-93f2-544cf8e5cb30",
+          ""
+        ],
+        [
+          "silk_overlap|129706000|63273000|00dc75df-b693-4b76-9499-b8b889abb365|09b8912b-7de2-4ceb-b08b-7e1fe66afdcb",
+          ""
+        ],
+        [
+          "silk_overlap|129706000|63273000|265efb11-1e18-42a7-93f2-544cf8e5cb30|3fdd36b7-d246-4381-b2cd-f348b698f303",
+          ""
+        ],
+        [
+          "silk_overlap|129706000|64743000|265efb11-1e18-42a7-93f2-544cf8e5cb30|4cdc3afd-fcdb-4d1e-846a-2c7d13cade7f",
+          ""
+        ],
+        [
+          "silk_overlap|129706000|64743000|265efb11-1e18-42a7-93f2-544cf8e5cb30|cd6efe7f-4301-4d6b-aa68-d039a248b3b3",
+          ""
+        ],
+        [
+          "silk_overlap|129706000|64924000|4cdc3afd-fcdb-4d1e-846a-2c7d13cade7f|ddb531b4-8ea5-49e9-9027-0fd2b5903f2c",
+          ""
+        ],
+        [
+          "silk_overlap|131991000|63273000|00dc75df-b693-4b76-9499-b8b889abb365|3fdd36b7-d246-4381-b2cd-f348b698f303",
+          ""
+        ],
+        [
+          "silk_overlap|131991000|64924000|cd6efe7f-4301-4d6b-aa68-d039a248b3b3|ddb531b4-8ea5-49e9-9027-0fd2b5903f2c",
+          ""
+        ],
+        [
+          "silk_overlap|202923000|97424000|a7d8207a-3194-44fd-ab59-5c226448d824|df4dee9b-ba76-4541-9411-7c5728c41002",
+          ""
+        ],
+        [
+          "silk_overlap|207187500|37234000|952c884f-6ae5-46d5-b965-b91205ae7f69|bf989b19-037d-43b6-a238-36200362959a",
+          ""
+        ],
+        [
+          "silk_overlap|207340500|37234000|13a34d79-0850-4af0-910e-2eb2aea9809c|952c884f-6ae5-46d5-b965-b91205ae7f69",
+          ""
+        ],
+        [
+          "silk_overlap|218440000|146878000|43c56134-e938-42ee-9962-dcfabb61bc35|5a77f4e5-0051-490b-8453-ff51fabec04d",
+          ""
+        ],
+        [
+          "silk_overlap|232550657|36691000|52cc6711-66a2-4684-8b18-45d2a2afed84|e0ff1f4f-ba2c-4acb-9c02-2b1df3f36808",
+          ""
+        ],
+        [
+          "silk_overlap|81130000|129682000|aa56eb84-1258-4611-b3eb-80d5fae656bf|e1e3f4f3-2f10-4b28-8998-5b28f41a555f",
+          ""
+        ],
+        [
+          "silk_overlap|81130000|142128000|04311469-264f-465a-bb69-c46ae5929acd|0cc722fc-11a3-4a31-aad4-9c60ab34e28a",
+          ""
+        ],
+        [
+          "track_dangling|167640000|66103500|63940b39-602f-466c-b1f8-6e77a85e5b09|00000000-0000-0000-0000-000000000000",
+          ""
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -510,7 +579,7 @@
       "no_connect_dangling": "warning",
       "pin_not_connected": "error",
       "pin_not_driven": "error",
-      "pin_to_pin": "warning",
+      "pin_to_pin": "error",
       "power_pin_not_driven": "error",
       "same_local_global_label": "warning",
       "similar_label_and_power": "warning",
@@ -682,6 +751,18 @@
           "label": "Sim.Pins",
           "name": "Sim.Pins",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer",
+          "name": "Manufacturer",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Part Number",
+          "name": "Part Number",
+          "show": false
         }
       ],
       "filter_string": "",
@@ -700,8 +781,8 @@
       "field_names": [],
       "intersheets_ref_own_page": false,
       "intersheets_ref_prefix": "",
-      "intersheets_ref_short": false,
-      "intersheets_ref_show": false,
+      "intersheets_ref_short": true,
+      "intersheets_ref_show": true,
       "intersheets_ref_suffix": "",
       "junction_size_choice": 3,
       "label_size_ratio": 0.375,
@@ -718,7 +799,7 @@
     "meta": {
       "version": 1
     },
-    "net_format_name": "",
+    "net_format_name": "KiCad",
     "page_layout_descr_file": "",
     "plot_directory": "",
     "space_save_all_events": true,
